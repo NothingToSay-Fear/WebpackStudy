@@ -115,14 +115,17 @@ module.exports = {
                     // 用来匹配 .css 结尾的文件
                     test: /\.css$/,
                     use: getStyleLoaders(),
+                    sideEffects:true
                 },
                 {
                     test: /\.less$/,
                     use: getStyleLoaders("less-loader"),
+                    sideEffects:true
                 },
                 {
                     test: /\.s[ac]ss$/,
                     use: getStyleLoaders("sass-loader"),
+                    sideEffects:true
                 },
                 {
 
