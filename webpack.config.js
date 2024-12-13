@@ -30,8 +30,6 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const CopyPlugin = require("copy-webpack-plugin");
 // 压缩图片
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-//剔除无用css
-const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 //分析打包耗时插件
 const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 //分析打包依赖插件
@@ -270,10 +268,6 @@ module.exports = {
         minimizer: [
             // css压缩也可以写到optimization.minimizer里面，效果与写到plugins一样的
             new CssMinimizerPlugin(),
-            //剔除无用css
-            new PurgeCSSPlugin({
-                paths: glob.sync(path.join(__dirname, 'public/index.html')),
-            }),
             // 当生产模式会默认开启TerserPlugin，但是我们需要进行其他配置，就要重新写了
             new TerserPlugin({
                 parallel: threads // 开启多进程
