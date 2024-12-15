@@ -2,7 +2,6 @@
 // Node.js的核心模块，专门用来处理文件路径
 const path = require("path");
 
-const glob = require('glob')
 // Node.js核心模块，os 模块提供了与操作系统交互的API，允许你访问操作系统相关的信息和功能。
 const os = require("os");
 // cpu核数
