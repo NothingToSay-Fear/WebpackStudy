@@ -14,8 +14,6 @@ const App: FC = () => {
     setCount((count) => count + 1)
   }
 
-  var a=1
-
   return (
     <>
       <div>{count}</div>
