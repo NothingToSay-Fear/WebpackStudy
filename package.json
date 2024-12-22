@@ -67,5 +67,5 @@
       "ie 11"
     ]
   },
-  "sideEffects": false
+  "sideEffects": ["*.css","*.scss","*.sass","*.less"]
 }
