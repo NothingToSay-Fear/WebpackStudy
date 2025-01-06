@@ -98,7 +98,7 @@ module.exports = {
         type: 'filesystem'
     },
     resolve: {
-        extensions: [".jsx", ".js", ".tsx", ".ts", ".json"],
+        extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
         alias: {
             '@/components': path.resolve(__dirname, '.', 'src/components'),
             '@/SWMComponents': path.resolve(__dirname, '.', 'src/SWMComponents'),
@@ -299,13 +299,7 @@ module.exports = {
                     test: /[\\/]node_modules[\\/]react(.*)?[\\/]/,
                     chunks: "initial",
                     priority: 20,
-                },
-                echarts: {
-                    name: "echarts",
-                    test: /[\\/]node_modules[\\/]echarts(.*)?[\\/]/,
-                    chunks: "initial",
-                    priority: 20,
-                },
+                }
             }
         },
         // 当使用contentHash优化文件缓存时，当math.js被入口main文件引用，修改math文件时hash值会变，导致文件名会变，入口main文件对math的引用路径会变，导致main文件的hash值也会变

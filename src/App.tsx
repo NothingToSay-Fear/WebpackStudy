@@ -1,4 +1,4 @@
-import { FC, lazy, Suspense, useCallback, useRef, useState } from 'react'
+import { FC, lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import './test'
 import ABC from './abc';
 import './index.css';
