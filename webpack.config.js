@@ -270,7 +270,7 @@ module.exports = {
             }),
             isEnvProduction && new ImageMinimizerPlugin({
                 minimizer: {
-                    implementation: ImageMinimizerPlugin.squooshMinify,
+                    implementation: ImageMinimizerPlugin.imageminMinify,
                     options: {
                         encodeOptions: {
                             mozjpeg: {
